@@ -1,6 +1,6 @@
 # ducchinhsero.github.io
 
-Personal portfolio of **Dang Duc Chinh**, a Full Stack Developer based in Da Nang, Vietnam.
+Personal portfolio of **Dang Duc Chinh**, focused on DevOps and infrastructure, based in Da Nang, Vietnam.
 
 ## Features
 
@@ -8,14 +8,15 @@ Personal portfolio of **Dang Duc Chinh**, a Full Stack Developer based in Da Nan
 - Light and dark themes.
 - Work experience, technical skills, education, awards, and selected projects.
 - Email and phone contact links.
-- Downloadable PDF CV.
+- Downloadable English DevOps CV in PDF format.
 - Responsive card layout for mobile, tablet, and desktop.
 
 ## Selected projects
 
-- [ZoDaNang](https://zodanang.online) — a full-stack travel discovery platform.
+- Linux and Windows Infrastructure Operations Lab — completed personal lab.
+- Application Delivery with GitLab CI and ArgoCD — completed personal lab.
 - Edge AI Health Monitoring & Behavior Recognition — graduation thesis.
-- Autonomous SUMO Robot — embedded software development.
+- [ZoDaNang](https://zodanang.online) — a full-stack travel discovery platform deployed on Vercel and Render.
 
 ## Development
 
@@ -33,7 +34,6 @@ Open http://localhost:3000 in your browser.
 ```sh
 pnpm exec tsc --noEmit
 pnpm build
-pnpm start
 ```
 
 ## Content
@@ -41,6 +41,6 @@ pnpm start
 - `lib/portfolio-content.ts`: Vietnamese and English copy, project technologies, and skills.
 - `components/portfolio.tsx`: portfolio layout, contact links, and language controls.
 - `app/layout.tsx`: default page metadata and font settings.
-- `public/cv/Dang_Duc_Chinh_Full_Stack_Developer_CV.pdf`: downloadable CV.
+- `public/cv/Dang_Duc_Chinh_DevOps_Engineer_CV_EN.pdf`: downloadable DevOps CV.
 
-The current configuration runs as a Next.js application. Publishing to GitHub Pages requires a separate static-export and deployment configuration.
+The Next.js configuration exports the site to `out/`. The GitHub Pages workflow in `.github/workflows/deploy.yml` builds and deploys this static output. To preview a production build locally, serve `out/` with a static web server.

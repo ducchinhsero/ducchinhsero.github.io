@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Be_Vietnam_Pro } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { content } from "@/lib/portfolio-content"
 
 const portfolioFont = Be_Vietnam_Pro({
   weight: ["400", "500", "600", "700"],
@@ -12,8 +13,8 @@ const portfolioFont = Be_Vietnam_Pro({
 })
 
 export const metadata: Metadata = {
-  title: "Dang Duc Chinh | Lập trình viên Full Stack",
-  description: "Portfolio của Dang Duc Chinh, lập trình viên Full Stack tại Đà Nẵng, Việt Nam, với các dự án phát triển web, tích hợp AI và hệ thống nhúng.",
+  title: content.vi.pageTitle,
+  description: content.vi.pageDescription,
 }
 
 export default function RootLayout({
