@@ -127,14 +127,13 @@ export function Portfolio() {
 
           <section id="projects" aria-labelledby="projects-title" className="min-w-0 md:col-span-2 lg:col-span-3">
             <h2 id="projects-title" className="mb-4 mt-3 text-lg font-semibold">{t.projects}</h2>
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
               {t.projectItems.map((project, index) => (
                 <Card key={project.id} className={`${cardClass} flex flex-col`}>
                   <span aria-hidden="true" className="mb-5 text-sm font-medium text-primary">0{index + 1}</span>
                   <h3 className="text-lg font-semibold leading-7">{project.title}</h3>
                   <p className="mt-2 text-xs font-medium leading-5 text-primary">{project.role}</p>
                   <p className="mt-4 flex-1 text-sm leading-7 text-muted-foreground">{project.description}</p>
-                  {project.scope && <p className="mt-4 border-l-2 border-primary/30 pl-3 text-xs leading-6 text-muted-foreground">{project.scope}</p>}
                   <div className="mt-5 flex flex-wrap gap-1.5">
                     {projectDetails[project.id].technologies.map((skill) => <Badge key={skill} variant="outline" className="rounded-full px-2.5 py-1 text-xs font-normal">{skill}</Badge>)}
                   </div>
